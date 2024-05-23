@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Landing_page from './landingpage';
+import Home from './dashboard/Home';
+import Users from './dashboard/Users';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Landing_page />} />
-        {/* <Route path='/directory' element={<Directorypage />}  /> */}
+        <Route path='/dashboard' element={<Home />} />
+        <Route path='/dashboard/users' element={<Users />} />
       </Routes>
 
 
